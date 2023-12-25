@@ -8,9 +8,40 @@
         <link rel="stylesheet" href="main.css"/>
         <script src="main.js" defer></script>
         <!-- "defer" allows the script to be loaded LAST instead of during the head first-->
+        <script src="https://kit.fontawesome.com/46c530c689.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
+        <div class="wrapper">
+            <div class="upload-box">
+                <input type="file" accept="image/*" hidden>
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <p>Browse File to Upload</p>
+            </div>
+            <div class="content">
+                <div class="row sizes">
+                    <div class="column width">
+                        <label>Width</label>
+                        <input type="number" id="width" name="width">
+                    </div>
+                    <div class="column height">
+                        <label>Height</label>
+                        <input type="number" id="height" name="height"/>
+                    </div>
+                </div>
+                <div class="row checkboxes">
+                    <div class="column ratio">
+                        <input type="checkbox" id="aspect-ratio" name="aspectRatio" checked>
+                        <label for="aspect-ratio">Lock aspect ratio</label>
+                    </div>
+                    <div class="column quality">
+                        <input type="checkbox" id="reduce-quality" name="reduceQuality">
+                        <label for="reduce-quality">Reduce quality</label>
+                    </div>
+                </div>
+                <button class="download-btn">Download Image</button>
+            </div>
+        </div>
 
     </body>
 </html>

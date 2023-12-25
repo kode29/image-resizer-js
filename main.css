@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #696fea
+}
+.wrapper {
+    width: 450px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 9px;
+}
+.wrapper .upload-box{
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px dashed #afafaf;
+    cursor: pointer;
+}
+.wrapper.active .upload-box {
+    border: none;
+}
+.upload-box p{
+    font-size: 1.06rem;
+    margin-top: 20px;
+}
+.upload-box i{
+    font-size: 3.5rem;
+}
+.wrapper.active .upload-box p,
+.wrapper.active .upload-box i {
+    display: none;
+}
+.wrapper.active .upload-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* I always wondered how to do this without a background */
+    border-radius: 5px;
+}
+.wrapper .content {
+    margin-top: 28px;
+}
+.content .row {
+    display: flex;
+    justify-content: space-between;
+}
+.content .row .column {
+    width: 45%;
+}
+.row .column label {
+    font-size: 1.06rem;
+}
+.sizes .column input {
+    width: 100%;
+    height: 49px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    outline: 0;
+    padding: 0 15px;
+    font-size: 1.06rem;
+    margin-top: 7px;
+}
+.sizes .column input:focus {
+    border: 2px solid #696fea;
+}
+.content .checkboxes {
+    margin-top: 20px;
+}
+.checkboxes .column {
+    display: flex;
+    align-items: center;
+}
+.checkboxes .column input {
+    width: 17px;
+    height: 17px;
+    margin-right: 9px;
+    accent-color: #696fea; /* This is neat! */
+}
+.content button.download-btn{
+    width: 100%;
+    padding: 15px 0;
+    margin: 30px 0 10px;
+    color: #fff;
+    outline: 0;
+    background: #696fea;
+    border: 0;
+    font-size: 1.06rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}  
